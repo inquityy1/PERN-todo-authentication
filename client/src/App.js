@@ -20,7 +20,9 @@ function App() {
   };
 
   useEffect(() => {
-    getData();
+    if (authToken) {
+      getData();
+    }
   }, []);
 
   console.log(tasks);
